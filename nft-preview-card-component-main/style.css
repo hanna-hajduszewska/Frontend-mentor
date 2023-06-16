@@ -1,0 +1,150 @@
+:root {
+	--clr-very-dark-blue-mainBG: hsl(217, 54%, 11%);
+	--clr-very-dark-blue-cardBG: hsl(216, 50%, 16%);
+	--clr-very-dark-blue-line: hsl(215, 32%, 27%);
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-soft-blue: hsl(215, 51%, 70%);
+	--clr-cyan: hsl(178, 100%, 50%);
+	font-size: 18px;
+	font-family: 'Outfit', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--clr-very-dark-blue-mainBG);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 19.5rem;
+	border-radius: 12px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--clr-very-dark-blue-cardBG);
+	padding: 1.4rem;
+	box-shadow: 0 20px 12px 8px hsl(215, 62%, 9%);
+}
+
+.imgWrapper {
+	border-radius: 12px;
+	position: relative;
+	width: 100%;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.5s ease;
+	background-color: var(--clr-cyan);
+}
+
+.imgWrapper:hover .overlay {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.imgWrapper img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.overlay img {
+	color: white;
+	width: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.content h3 {
+	color: var(--clr-white);
+	font-weight: 600;
+	font-size: 1.25rem;
+	margin: 1rem 0;
+	transition: 0.5s ease;
+	width: fit-content;
+}
+
+.content h3:hover {
+	color: var(--clr-cyan);
+	cursor: pointer;
+}
+
+.content p {
+	color: var(--clr-soft-blue);
+	margin-bottom: 1.2rem;
+	line-height: 1.4rem;
+}
+
+.detailsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid var(--clr-very-dark-blue-line);
+	font-weight: 400;
+	font-size: 0.9rem;
+}
+
+.detailsWrapper strong {
+	color: var(--clr-cyan);
+	display: flex;
+	align-items: center;
+}
+
+.detailsWrapper img {
+	padding-right: 0.3rem;
+}
+
+.detailsWrapper span {
+	color: var(--clr-soft-blue);
+	display: flex;
+	align-items: center;
+}
+
+.userWrapper {
+	margin: 1rem 0;
+	display: flex;
+	align-items: center;
+}
+
+.userWrapper img {
+	border: 1px solid var(--clr-white);
+	border-radius: 50%;
+	width: 1.8rem;
+}
+
+.userWrapper span {
+	padding-left: 1rem;
+	color: var(--clr-soft-blue);
+	font-size: 0.9rem;
+}
+
+.userWrapper strong {
+	color: var(--clr-white);
+	font-weight: 300;
+	transition: 0.5s ease;
+}
+
+.userWrapper strong:hover {
+	color: var(--clr-cyan);
+	cursor: pointer;
+}
